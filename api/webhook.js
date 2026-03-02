@@ -27,7 +27,7 @@ export default async function handler(req, res) {
         "Authorization": `Bearer ${GROQ_API_KEY}`
       },
       body: JSON.stringify({
-        model: "openai/gpt-oss-120b",
+        model: "openai/gpt-oss-20b",
         messages: [{ role: "user", content: message }]
       })
     });
@@ -64,3 +64,4 @@ export default async function handler(req, res) {
     return res.status(500).send("Server Error");
   }
 }
+
